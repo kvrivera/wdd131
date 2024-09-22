@@ -134,9 +134,10 @@ a.darklink:hover {
 }
 
 footer {
-    display: flex;
+    display: grid;
     background: #65743A;
     padding: 1rem;
+    grid-template-columns: 1fr 1fr;
 }
 
 /* colours for colour scheme 
