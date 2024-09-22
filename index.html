@@ -1,11 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link href="styles/base.css" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Kathleen Rivera">
+    <meta name="description" content="The homepage of a student-created website by Kathleen Rivera.
+        This website was created as a project for the WDD131 course offered
+        by BYU-Idaho.">
+    <title>WDD 131 - Dynamic Web Fundamentals - Kathleen Rivera</title>
 </head>
+
 <body>
-    <h1>WDD 131 - Kathleen Rivera</h1>
+    <header>
+        <div class="head">
+            <h1>WDD 131: Dynamic Web Fundamentals</h1>
+            <p>Kat Rivera</p>
+        </div>
+
+        <nav>
+
+            <a href="https://www.linkedin.com/in/katrivera/">LinkedIn</a>
+
+            <a href="https://byui.instructure.com/">I-Learn</a>
+
+            <a
+                href="https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng#:~:text=13%20I%20can%20do%20all%20things%20through%20Christ%20which%20strengtheneth%20me.">Favourite
+                Scripture</a>
+
+            <a href="finalproject/placeholder.html">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card aboutme">
+            <article class="boxheader">
+                <h2>About Me</h2>
+            </article>
+
+            <article class="para">
+                <p>
+                    Hello! My name is Kathleen, and I go by Kat.
+                    I am a Canadian student at BYU-Idaho, studying Software
+                    Development. I grew up in the world of Neopets and other
+                    browser and PC games, including WarCraft II, Minesweep,
+                    and Tamagotchi generations now unknown to most of today's
+                    youth. I have always dreamed of working for a team of like-minded
+                    people and I'm excited to explore the possibility of that as I
+                    pursue my studies.
+                </p>
+            </article>
+            <article>
+                <img src="images/selfimage.jpg"
+                    alt="A selfie image of the author smiling at the camera, and wearing a black hat." width="200px">
+
+            </article>
+
+            <article class="boxheader">
+                <h3 class="bottomborder">
+                    Ontario, Canada
+                </h3>
+            </article>
+            <article class="para">
+                <p>
+                    Ontario is a heavily populated province in Canada.
+                    It is home to 14.6 million people, many of whom live in
+                    large and well-known cities like Toronto. While there are no mountains
+                    in the province itself, there are plenty of ski slopes to tear down
+                    come the winter months. While Canada is known for its harsh winters,
+                    Ontario is beautiful and vibrant in every season, and the plentiful beaches
+                    make even summer a wildly fun time to spend there.
+                </p>
+            </article>
+            <article>
+                <img src="images/canadianflag.jpg" alt="Canadian flag blowing in the wind against a dark blue sky."
+                    width="200px">
+            </article>
+        </section>
+
+        <section class="card webdev">
+            <article class="boxheader">
+                <h2>Web Dev Resources</h2>
+            </article>
+
+            <article class="list">
+                <ul>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn" class="darklink">MDN School</a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/html/default.asp" class="darklink">W3 School</a>
+                    </li>
+                    <li>
+                        <a href="https://coolors.co/" class="darklink">Cooler Colours</a>
+                    </li>
+                </ul>
+            </article>
+
+        </section>
+
+    </main>
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+            Kathleen Rivera, Canada
+        </p>
+
+        <p id="lastModified">
+
+        </p>
+    </footer>
 </body>
+
 </html>
