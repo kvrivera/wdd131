@@ -73,7 +73,7 @@ room for one another. Yay! */
 main {
     display: flex;
     flex-direction: row;
-    flex-shrink: 0%;
+    flex-shrink: 0;
 }
 
 /* This section will edit the boxes that the About Me
