@@ -58,7 +58,7 @@ a:link {
 }
 
 a:visited {
-    color: #EFDD8D;
+    color: #fff;
 }
 
 a:hover {
@@ -136,6 +136,7 @@ a.darklink:hover {
 footer {
     display: grid;
     background: #65743A;
+    color: #fff;
     padding: 1rem;
     grid-template-columns: 1fr 1fr;
 }
