@@ -10,7 +10,7 @@ currentYear.innerHTML = `<span class="currentYear">${todaysDate.getFullYear()}</
 // get the date and time the document was last modified:
 let lastMod = document.querySelector("#lastModified");
 // convert the lastModified property into a date object:
-const dateLastMod = new Date();
+const dateLastMod = document.lastModified;
 // pick out only the Month, date, year, hours, mins, seconds
 document.getElementById("lastModified").innerHTML = `Last Modified: <span class="lastMod">${dateLastMod}</span>`
 // why does this next line not work, instead of the line above?
