@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    background-color: #904f15;
+    font-family: "Ribeye Maro", serif;
+    font-weight: 400;
+    color: #fff;
+    padding: 1rem;
+    border: 2rem;
+}
+
+nav {
+    background-color: #904f15;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block; /* block helps us design these well in the nav */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+
+}
+
+.active {
+    color: #606c38;
+}
+
+ul {
+    list-style-type: none;
+    /* takes bullets off of <ul> element */
+}
