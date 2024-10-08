@@ -48,12 +48,12 @@ main {
     /* When the button is clicked, the open class is toggled (added/removed*/
 }
 
-.active::before {
-    content: "☁︎"
-        /* wayfinding symbol for user to know what page they are on*/
+.navigation {
+    display: none;
+    /* show when 'open' class is added to the button but not otherwise*/
 }
 
-.navigation {
+.open+nav .navigation {
     display: flex;
     flex-direction: column;
     background-color: #904f15;
@@ -61,6 +61,11 @@ main {
     margin: 0 auto;
     font-family: "Lato", sans-serif;
     font-weight: 300;
+}
+
+.active::before {
+    content: "☁︎"
+        /* wayfinding symbol for user to know what page they are on*/
 }
 
 nav a {
@@ -71,7 +76,6 @@ nav a {
     padding: 1rem;
     text-decoration: none;
     transition: 0.5s;
-
 }
 
 nav a:hover {
