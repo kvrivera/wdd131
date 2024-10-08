@@ -75,7 +75,7 @@ nav a {
     text-align: center;
     padding: 1rem;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 nav a:hover {
