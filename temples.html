@@ -5,6 +5,7 @@
     <link href="/styles/temples.css" rel="stylesheet">
     <link href="/styles/temples-large.css" rel="stylesheet">
     <script src="/scripts/temples.js" defer></script>
+    <script src="/scripts/getdates.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD131 - Temples</title>
@@ -16,8 +17,9 @@
 <body>
     <header>
         <h1>Temples</h1>
+        <button id="menu"></button>
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="filler.html">Old</a></li>
                 <li><a href="filler.html">New</a></li>
@@ -28,58 +30,69 @@
         </nav>
     </header>
     <main>
-        <!-- heading element with content that matc hes the current menu selection -->
+        <section id="temples">
+            <!-- heading element with content that matc hes the current menu selection -->
         <h2></h2>
 
         <!-- Using Draper Temple as a holder image until other images are placed in their proper places-->
-        <figure>
-            <img src="/images/draper-temple.jpg"
-                alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
-            <figcaption>Draper, Utah LDS Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="/images/draper-temple.jpg"
-                alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
-            <figcaption>Draper, Utah LDS Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="/images/draper-temple.jpg"
-                alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
-            <figcaption>Draper, Utah LDS Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="/images/draper-temple.jpg"
-                alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
-            <figcaption>Draper, Utah LDS Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="/images/draper-temple.jpg"
-                alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
-            <figcaption>Draper, Utah LDS Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="/images/draper-temple.jpg"
-                alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
-            <figcaption>Draper, Utah LDS Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="/images/draper-temple.jpg"
-                alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
-            <figcaption>Draper, Utah LDS Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="/images/draper-temple.jpg"
-                alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
-            <figcaption>Draper, Utah LDS Temple</figcaption>
-        </figure>
-        <figure>
-            <img src="/images/draper-temple.jpg"
-                alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
-            <figcaption>Draper, Utah LDS Temple</figcaption>
-        </figure>
+        <div class="container">
+            <figure>
+                <img src="/images/draper-temple.jpg"
+                    alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
+                <figcaption>Draper, Utah LDS Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/draper-temple.jpg"
+                    alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
+                <figcaption>Draper, Utah LDS Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/draper-temple.jpg"
+                    alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
+                <figcaption>Draper, Utah LDS Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/draper-temple.jpg"
+                    alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
+                <figcaption>Draper, Utah LDS Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/draper-temple.jpg"
+                    alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
+                <figcaption>Draper, Utah LDS Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/draper-temple.jpg"
+                    alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
+                <figcaption>Draper, Utah LDS Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/draper-temple.jpg"
+                    alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
+                <figcaption>Draper, Utah LDS Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/draper-temple.jpg"
+                    alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
+                <figcaption>Draper, Utah LDS Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/draper-temple.jpg"
+                    alt="An aerial shot of a Temple of The Church of Jesus Christ of Latter-day Saints. This temple is located in Draper, Utah. There green mountains located behind and beside the building.">
+                <figcaption>Draper, Utah LDS Temple</figcaption>
+            </figure>
+        </div>
+        </section>
     </main>
-    <footer>
 
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Kathleen Rivera, Canada
+        </p>
+
+        <p id="lastModified">
+        </p>
     </footer>
 </body>
 

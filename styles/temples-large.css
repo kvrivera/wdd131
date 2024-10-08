@@ -1,0 +1,24 @@
+@media (min-width: 640px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;/* default is rows */
+        justify-content: space-around;
+    }
+
+    #menu {
+        display: none; /* hide the hamburger button */
+    }
+
+    .navigation {
+        flex-direction: row;;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%; /* grow, shrink, 100%*/
+    }
+}
