@@ -1,0 +1,13 @@
+/*enable resopnsive behaviour on the image by setting
+the width of the img element to 100%
+and the height to auto (or vice-verse)
+This is the easiest way to maintain the image aspect ratio*/
+
+/* use object-fit with set image containers
+Just be mindful of the art direction (cropping choices)
+with the responsive results */
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
