@@ -56,6 +56,13 @@ h2 {
     text-align: center;
 }
 
+.data-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .data {
     display: flex;
     /* allows us to center the items on the page */
@@ -112,11 +119,52 @@ footer {
 
 /**** wider view ****/
 @media only screen and (min-width: 769px) {
+    main {
+        background-image: url('/images/volcano-large.webp');
+        background-size: cover;
+        /* adjusts the image to cover the div container */
+        background-position: center;
+        width: 100%;
+        min-height: 500px;
+        padding-bottom: 1rem;
+        position: relative;
+        /* so that we can put the div boxes over top of it
+        * it serves as a reference point for the div containers */
+    }
+
+    .background-img {
+        display: none;
+        /* the big image is only visible in the background as described under the main element above now */
+    }
+
     .data-box {
-        /* top left corner */
+        background-color: rgb(220, 182, 135, 0.35);
+        padding: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    h2 {
+        background-color: #F7A501;
+        text-align: center;
+        text-shadow: 10px, 10px, #b53815;
+        padding: 1rem;
     }
 
     .weather-box {
-        /* bottom right corner */
+        background-color: rgb(220, 182, 135, 0.35);
+        padding: 1rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .weather-box h2::after {
+        content: " ☁️";
+    }
+
+    .weather-box img {
+        display: none;
     }
 }

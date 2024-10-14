@@ -22,19 +22,19 @@
         </h1>
     </header>
     <main>
-        <picture id="dataimg">
-            <source srcset="/images/middle-earth-large.webp" media="min-width: 1000px"> <!--check min-width value-->
-            <source srcset="/images/middle-earth-medium.webp" media="min-width: 500px"> <!--check min-width value-->
-            <img src="/images/middle-earth-small.jpeg"
-                alt="A close-up image of the main attraction of Mordor, commonly referred to as Mount Doom."
-                width="500">
-            <!--set width and height attributes based on the aspect ratio-->
-        </picture>
+        <div class="background-img">
+            <picture>
+                <source srcset="images/volcano-large.webp" media="(min-width: 769px)">
+                <img src="/images/middle-earth-small.jpeg"
+                    alt="A close-up image of the main attraction of Mordor, commonly referred to as Mount Doom."
+                    width="500">
+                <!--set width and height attributes based on the aspect ratio-->
+            </picture>
+        </div>
+        
 
         <div class="data-box">
-            <h2>
-                Data
-            </h2>
+            <h2>Data</h2>
             <table class="data">
                 <tr>
                     <th>Area:</th>
