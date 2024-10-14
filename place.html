@@ -22,15 +22,16 @@
         </h1>
     </header>
     <main>
-        <picture>
+        <picture id="dataimg">
             <source srcset="/images/middle-earth-large.webp" media="min-width: 1000px"> <!--check min-width value-->
             <source srcset="/images/middle-earth-medium.webp" media="min-width: 500px"> <!--check min-width value-->
-            <img src="/images/middle-earth-small.webp"
-                alt="A close-up image of the main attraction of Mordor, commonly referred to as Mount Doom.">
+            <img src="/images/middle-earth-small.jpeg"
+                alt="A close-up image of the main attraction of Mordor, commonly referred to as Mount Doom."
+                width="500">
             <!--set width and height attributes based on the aspect ratio-->
         </picture>
 
-        <div>
+        <div class="data-box">
             <h2>
                 Data
             </h2>
@@ -62,9 +63,9 @@
             </table>
         </div>
 
-        <div>
+        <div class="weather-box">
             <h2>Weather</h2>
-            <img src="/images/weather.webp" alt="add description here">
+            <img src="/images/weather-icon.webp" alt="Cloudy weather icon" width="50">
             <!--add alt description, and also width and height properties based on aspect ratio-->
             <table class="weather">
                 <tr>

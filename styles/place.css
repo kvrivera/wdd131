@@ -17,7 +17,7 @@ font-weight: 400;
 font-style: normal;
 */
 
-/* on mobile devices */
+/**** mobile view ****/
 header,
 h1,
 h2,
@@ -35,6 +35,20 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    /* these will help to maintain aspect ratio as the window grows and shrinks on the user's end */
+    padding: 0;
+    margin: 0;
+    border-top: solid #F7A501 1rem;
+    border-bottom: solid #F7A501 1rem;
+}
+
+div {
+    font-family: "Mukta", sans-serif;
 }
 
 /* DATA section */
@@ -58,6 +72,20 @@ h2 {
 }
 
 /* WEATHER section */
+.weather-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.weather-box img {
+    align-items: center;
+    max-width: 100px;
+    height: auto;
+    border: none;
+}
+
 .weather {
     display: flex;
     justify-content: center;
@@ -69,6 +97,26 @@ h2 {
 
 .weather td {
     padding-left: 20px;
+    text-align: left;
 }
 
-@media only screen and (min-width:)
+footer {
+    display: grid;
+    background: #b53815;
+    font-family: "Mukta", sans-serif;
+    color: #fff;
+    padding: 5px;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+/**** wider view ****/
+@media only screen and (min-width: 769px) {
+    .data-box {
+        /* top left corner */
+    }
+
+    .weather-box {
+        /* bottom right corner */
+    }
+}
