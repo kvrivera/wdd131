@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="styles/place.css" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/place.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kathleen Rivera">
+    <meta name="description"
+        content="A webpage created for the Place Assignment in the WDD131 course, created by Kathleen Rivera.">
+    <title>WDD131 | Place Assignment </title>
+
+</head>
+
+<body>
+    <header>
+        <h1>
+            Mordor
+        </h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="/images/middle-earth-large.webp" media="min-width: 1000px"> <!--check min-width value-->
+            <source srcset="/images/middle-earth-medium.webp" media="min-width: 500px"> <!--check min-width value-->
+            <img src="/images/middle-earth-small.webp"
+                alt="A close-up image of the main attraction of Mordor, commonly referred to as Mount Doom.">
+            <!--set width and height attributes based on the aspect ratio-->
+        </picture>
+
+        <div>
+            <h2>
+                Data
+            </h2>
+            <table class="data">
+                <tr>
+                    <th>Area:</th>
+                    <td>1.64 million sq m</td>
+                </tr>
+                <tr>
+                    <th>Population:</th>
+                    <td>6.7 million</td>
+                </tr>
+                <tr>
+                    <th>Capital:</th>
+                    <td>Barad-dûr</td>
+                </tr>
+                <tr>
+                    <th>Currency:</th>
+                    <td>Castar</td>
+                </tr>
+                <tr>
+                    <th>Main Language:</th>
+                    <td>Black Speech</td>
+                </tr>
+                <tr>
+                    <th>Time Zone:</th>
+                    <td>DLT (Dark Lord's Time)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h2>Weather</h2>
+            <img src="/images/weather.webp" alt="add description here">
+            <!--add alt description, and also width and height properties based on aspect ratio-->
+            <table class="weather">
+                <tr>
+                    <th>Temperature:</th>
+                    <td id="temperature"> <!-- Static Value -->
+                        5
+                    </td>
+                </tr>
+                <tr>
+                    <th>Conditions:</th>
+                    <td id="conditions"> <!-- Static Value -->
+                        Bleak, Perpetual Darkness
+                    </td>
+                </tr>
+                <tr>
+                    <th>Wind Speed:</th>
+                    <td id="windspeed"> <!-- Static Value -->
+                        20
+                    </td>
+                </tr>
+                <tr>
+                    <th>Windchill:</th>
+                    <td id="windchill"></td> <!-- Updated Dynamically -->
+                </tr>
+            </table>
+        </div>
+
+
+
+
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Kathleen Rivera, Canada
+        </p>
+
+        <p id="lastModified">
+        </p>
+    </footer>
+</body>
+
+</html>
