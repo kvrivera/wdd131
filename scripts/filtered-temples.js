@@ -1,11 +1,13 @@
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
+// hamburger button nav
 hamButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
     hamButton.classList.toggle('open');
 });
 
+// temple data array
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -89,3 +91,24 @@ const temples = [
     },
 
 ];
+
+// loop through the temples array to create 
+// "temple cards" for each temple
+// Each temple card should display:
+// Name, location, dedication date, total area of the
+// temple in sq ft, absolute image address of the temple,
+// an alt value for the temple image.
+// Use native lazy loading to each temple image
+const templeCards = document.querySelector(".temple-cards");
+
+temples.forEach(function (temple) { // for each temple in temples
+    const card = document.createElement("figure"); // create a figure and call it 'card'
+    card.innerHTML = `
+        <h3>${temple.templeName}</h3>
+        <p>LOCATION: ${temple.location}</p>
+        <p>DEDICATED: ${temple.dedicated}</p>
+        <p>SIZE: ${temple.area} sq ft </p>
+        <img src="${temple.imageUrl}" alt="Front view of the ${templeName} temple of The Church of Jesus Christ of Latter-day Saints." loading="lazy">
+    `;
+    templeCards.appendChild(card);
+});
