@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+/* mobile *****/
+header {
+    background-color: #904f15;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid #c37631;
+    font-family: "Ribeye Maro", serif;
+    font-weight: 400;
+    text-align: left;
+    color: #fff;
+}
+
+header,
+main {
+    margin: 0 auto;
+}
+
+#menu {
+    background: none;
+    color: #fff;
+    border: 0;
+    margin: 1rem;
+    font-size: 2.5rem;
+    position: fixed;
+    top: 50px;
+    right: 0;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+.open a {
+    display: block;
+    /* When the button is clicked, the open class is toggled (added/removed*/
+}
+
+.navigation {
+    display: none;
+    /* show when 'open' class is added to the button but not otherwise*/
+}
+
+.open+nav .navigation {
+    display: flex;
+    flex-direction: column;
+    background-color: #904f15;
+    max-width: 640px;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+.active::before {
+    content: "☁︎"
+        /* wayfinding symbol for user to know what page they are on*/
+}
+
+nav a {
+    display: block;
+    /* block helps us design these well in the nav */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+nav a:hover {
+    border: 1px solid #fff;
+    /* adding this border helps us see the shape of the containers */
+    background-color: #eca568;
+    font-style: italic;
+}
+
+ul {
+    list-style-type: none;
+    /* takes bullets off of <ul> element */
+}
+
+main {
+    max-width: 640px;
+}
+
+.temples {
+    margin: 1rem auto;
+    max-width: 960px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
+    place-items: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: .5rem;
+}
+
+figcaption {
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    background: #65743A;
+    color: #fff;
+    padding: 5px;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+
+@media (min-width: 640px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        /* ensure the navigation items are displayed as a row*/
+        flex-direction: row;
+        /* default is rows */
+        justify-content: space-around;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+    }
+
+    #menu {
+        display: none;
+        /* hide the hamburger button */
+    }
+
+    .navigation {
+        flex-direction: row;
+        /* maintain row direction */
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 auto;
+        /* grow, shrink, auto*/
+    }
+}
