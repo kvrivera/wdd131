@@ -126,7 +126,7 @@ footer {
 /**** wider view ****/
 @media only screen and (min-width: 769px) {
     main {
-        background-image: url('/images/volcano-large.webp');
+        background-image: url('images/volcano.webp');
         background-size: cover;
         /* adjusts the image to cover the div container */
         background-position: center;
