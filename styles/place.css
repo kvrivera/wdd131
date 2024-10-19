@@ -138,11 +138,6 @@ footer {
         * it serves as a reference point for the div containers */
     }
 
-    .background-img {
-        display: none;
-        /* the big image is only visible in the background as described under the main element above now */
-    }
-
     .data-box {
         background-color: rgb(220, 182, 135, 0.35);
         padding: 1rem;
@@ -161,7 +156,7 @@ footer {
         background-color: rgb(220, 182, 135, 0.35);
         padding: 1rem;
         position: absolute;
-        bottom: 0;
+        bottom: 30px;
         right: 0;
     }
 
