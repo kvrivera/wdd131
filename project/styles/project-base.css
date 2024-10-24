@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Oooh+Baby&display=swap');
+
+:root {
+    --background-color: #cecbd8;
+    --sub-background-color: #E1AEC5;
+
+    --header-font: "Oooh Baby", cursive;
+    --header-color: #6d3360;
+
+    --main-font: "Oxygen", sans-serif;
+    --main-text-color: #372245;
+
+    --border-color: #b68ebf;
+}
+
+header {
+    background-color: var(--sub-background-color);
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    font-family: var(--main-font);
+    font-weight: 400;
+    text-align: left;
+}
+
+#menu {
+    background: none;
+    color: var(--main-text-color);
+    border: 0;
+    margin: 1rem;
+    font-size: 2.5rem;
+    position: fixed;
+    top: 33px;
+    right: 0;
+}
+
+#menu::before {
+    content: "☰";
+    color: var(--header-color);
+    /* to open the menu */
+}
+
+#menu.open::before {
+    content: "✗";
+    /* to close the menu */
+}
+
+.open a {
+    display: block;
+    /* When the button is clicked, the open class is toggled (added/removed*/
+}
+
+.active::before {
+    content: "📚"
+        /* wayfinding symbol for user to know what page they are on*/
+}
+
+.navigation {
+    display: none;
+    /* show when 'open' class is added to the button but not otherwise*/
+}
+
+.open+nav .navigation {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sub-background-color);
+    max-width: 640px;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    color: var(--main-text-color);
+}
+
+nav a {
+    display: block;
+    /* block helps us design these well in the nav */
+    color: var(--main-text-color);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+nav a:hover {
+    border: 1px solid var(--border-color);
+    /* adding this border helps us see the shape of the containers */
+    background-color: var(--border-color);
+    font-family: var(--header-font);
+    font-size: larger;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    /* takes bullets off of <ul> element */
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--main-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--header-color);
+}
+
+.right-align {
+    text-align: right;
+}
+
+/* FOR LARGER SCREENS */
+@media (min-width: 640px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navigation {
+        display: flex;
+        /* ensure the navigation items are displayed as a row*/
+        flex-direction: row;
+        /* default is rows */
+        justify-content: space-around;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+    }
+
+    #menu {
+        display: none;
+        /* hide the hamburger button */
+    }
+
+    .navigation {
+        flex-direction: row;
+        /* maintain row direction */
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 auto;
+        /* grow, shrink, auto*/
+    }
+}

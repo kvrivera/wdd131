@@ -87,7 +87,7 @@ const temples = [
         dedicated: "1990, August, 25",
         area: 57982,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/adelaide-australia/400x250/adelaide-australia-temple-lds-856093-wallpaper.jpg"
+            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/toronto-ontario/400x250/toronto-temple-lds-854102-wallpaper.jpg"
     },
 
 ];
@@ -108,7 +108,24 @@ temples.forEach(function (temple) { // for each temple in temples
         <p>LOCATION: ${temple.location}</p>
         <p>DEDICATED: ${temple.dedicated}</p>
         <p>SIZE: ${temple.area} sq ft </p>
-        <img src="${temple.imageUrl}" alt="Front view of the ${templeName} temple of The Church of Jesus Christ of Latter-day Saints." loading="lazy">
+        <img src="${temple.imageUrl}" alt="Front view of the ${temple.templeName} temple of The Church of Jesus Christ of Latter-day Saints." loading="lazy">
     `;
     templeCards.appendChild(card);
 });
+
+// when user clicks "Old" on nav menu
+// temples built before 1990
+const oldNavLink = document.querySelector("#oldlink");
+oldNavLink.addEventListener("click", () -> (
+    let templeCards.innerHTML = " ";
+))
+temples.forEach(function (temple) {
+    let dedicatedDetails = temple.dedicated.split(",");
+
+    // parse year of dedicatedDetails to int
+    let dedicatedYear = parseInt(dedicatedDetails[0])
+    if (dedicatedYear < 1990) {
+
+    }
+})
+const oldTemples = temples.filter(temple -> temple.dedicated.includes())
