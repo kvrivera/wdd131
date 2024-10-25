@@ -97,12 +97,27 @@ ul {
     /* takes bullets off of <ul> element */
 }
 
+.page-title {
+    text-align: center;
+}
+
 body {
     background-color: var(--background-color);
     font-family: "Oxygen", sans-serif;
     font-weight: 300;
     font-style: normal;
     color: var(--main-text-color);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main div {
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 h1,
@@ -117,8 +132,67 @@ h6 {
     color: var(--header-color);
 }
 
+
 .right-align {
     text-align: right;
+}
+
+/* for index.html */
+.author-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content 1fr;
+
+}
+
+.author-box h3 {
+    grid-column: 1/2;
+    grid-row: 1;
+    text-align: center;
+    line-height: 1;
+    min-height: 25px;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.author-box img {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    height: auto;
+    padding-top: 30px;
+    justify-self: center;
+}
+
+.author-box div {
+    grid-column: 1;
+    grid-row: 3/4;
+}
+
+/* for rating.html */
+.rating-card {
+    display: grid;
+    justify-content: center;
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    border: 1rem solid var(--border-color);
+    border-bottom: 0.5rem solid var(--border-color);
+    border-top: 0.5rem solid var(--border-color);
+    border-radius: .75rem;
+}
+
+footer {
+    font-size: x-small;
+}
+
+.footer-msg {
+    font-size: small;
+    font-style: italic;
+    text-align: center;
 }
 
 /* FOR LARGER SCREENS */
@@ -153,4 +227,37 @@ h6 {
         flex: 1 1 auto;
         /* grow, shrink, auto*/
     }
+
+    /* for index.html */
+    .author-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: min-content 2fr;
+    }
+
+    .author-box h3 {
+        grid-column: 1/3;
+        grid-row: 1;
+        text-align: center;
+        line-height: 1;
+        min-height: 25px;
+        margin: 0;
+        padding-top: 5px;
+    }
+
+    .author-box img {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 100%;
+        min-width: 200px;
+        max-width: 400px;
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .author-box div {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
 }
