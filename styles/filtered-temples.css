@@ -91,7 +91,7 @@ ul {
 }
 
 main {
-    max-width: 640px;
+    max-width: 1000px;
 }
 
 .temples {
@@ -99,11 +99,24 @@ main {
     max-width: 960px;
 }
 
-.container {
+.temple-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1px;
     place-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.temple-cards figure {
+    margin: 1px;
+    padding: 1rem;
+    padding-right: 1.5rem;
+    border: 0.5px solid #65743A;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
 }
 
 img {

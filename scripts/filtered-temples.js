@@ -99,33 +99,72 @@ const temples = [
 // temple in sq ft, absolute image address of the temple,
 // an alt value for the temple image.
 // Use native lazy loading to each temple image
-const templeCards = document.querySelector(".temple-cards");
+const templeCards = document.querySelector(".temple-cards"); // find the location in the html doc
+function createTempleCard(temples) {
+    templeCards.innerHTML = ""; // clear any existing content
+    temples.forEach(function (temple) { // for each temple in temples
+        const card = document.createElement("figure"); // create a figure and call it 'card'
+        card.innerHTML = `
+            <h3>${temple.templeName}</h3>
+            <p>LOCATION: ${temple.location}</p>
+            <p>DEDICATED: ${temple.dedicated}</p>
+            <p>SIZE: ${temple.area} sq ft </p>
+            <img src="${temple.imageUrl}" alt="Front view of the ${temple.templeName} temple of The Church of Jesus Christ of Latter-day Saints." loading="lazy">
+        `;
+        templeCards.appendChild(card);
+    })
+}
+createTempleCard(temples); // call the function and actually create the temple cards
 
-temples.forEach(function (temple) { // for each temple in temples
-    const card = document.createElement("figure"); // create a figure and call it 'card'
-    card.innerHTML = `
-        <h3>${temple.templeName}</h3>
-        <p>LOCATION: ${temple.location}</p>
-        <p>DEDICATED: ${temple.dedicated}</p>
-        <p>SIZE: ${temple.area} sq ft </p>
-        <img src="${temple.imageUrl}" alt="Front view of the ${temple.templeName} temple of The Church of Jesus Christ of Latter-day Saints." loading="lazy">
-    `;
-    templeCards.appendChild(card);
-});
 
+// Add dedicatedYear property to each temple in the array (useful later)
+temples.forEach(temple => {
+    let yearString = temple.dedicated.split(",")[0]; // isolates the year
+    temple.dedicatedYear = parseInt(yearString); // parse from string to int, add a new key-value in array called dedicatedYear
+})
+
+// add variable to access the heading of each page to change it based on filter
+const templeHeading = document.querySelector("#temples h2"); // targets the h2 specifically
+
+// when user clicks "Home" on nav menu
+// shows all temples
+const homeNavLink = document.querySelector("#homelink");
+homeNavLink.addEventListener("click", () => {
+    createTempleCard(temples); // show all temples
+    templeHeading.innerText = "All Listed Temples";
+})
 // when user clicks "Old" on nav menu
 // temples built before 1990
-const oldNavLink = document.querySelector("#oldlink");
-oldNavLink.addEventListener("click", () -> (
-    let templeCards.innerHTML = " ";
-))
-temples.forEach(function (temple) {
-    let dedicatedDetails = temple.dedicated.split(",");
-
-    // parse year of dedicatedDetails to int
-    let dedicatedYear = parseInt(dedicatedDetails[0])
-    if (dedicatedYear < 1990) {
-
-    }
+const oldNavLink = document.querySelector("#oldlink"); // assigns a variable here for the "old" link in the html doc
+oldNavLink.addEventListener("click", () => {
+    const oldTemples = temples.filter(temple => temple.dedicatedYear < 1990); // if dedication year is less than (before) 1990
+    createTempleCard(oldTemples); // reuse the function created before
+    templeHeading.innerText = "Old Temples";
 })
-const oldTemples = temples.filter(temple -> temple.dedicated.includes())
+
+// when user clicks "New" on nav menu
+// temples built after 2000
+const newNavLink = document.querySelector("#newlink"); // assigns variable for new
+newNavLink.addEventListener("click", () => {
+    const newTemples = temples.filter(temple => temple.dedicatedYear > 2000); // if dedicated after 2000
+    createTempleCard(newTemples);
+    templeHeading.innerText = "New Temples";
+})
+
+// when user clicks "Large" on nav menu
+// temples larger than 90000 square feet
+const largeNavLink = document.querySelector("#largelink");
+largeNavLink.addEventListener("click", () => {
+    const largeTemples = temples.filter(temple => temple.area > 90000);
+    createTempleCard(largeTemples);
+    templeHeading.innerText = "Large Temples";
+})
+
+// when user clicks "Small" on nav menu
+// temples smaller than 10000 square feet
+const smallNavLink = document.querySelector("#smalllink");
+smallNavLink.addEventListener("click", () => {
+    const smallTemples = temples.filter(temple => temple.area < 10000);
+    createTempleCard(smallTemples);
+    templeHeading.innerText = "Small Temples";
+})
