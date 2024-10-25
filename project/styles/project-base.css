@@ -171,6 +171,22 @@ h6 {
     grid-row: 3/4;
 }
 
+/* for storybooks.html */
+.storybook-imgs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 5 columns */
+    gap: 5px;
+}
+
+.storybook-imgs img {
+    width: 100%;
+    min-width: 50px;
+    max-width: 100px;
+    justify-self: center;
+    align-self: center;
+}
+
 /* for rating.html */
 .rating-card {
     display: grid;
@@ -260,4 +276,19 @@ footer {
         grid-row: 2/3;
     }
 
+    /* for storybooks.html */
+    .storybook-imgs {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        /* 5 columns */
+        gap: 5px;
+    }
+
+    .storybook-imgs img {
+        width: 100%;
+        min-width: 150px;
+        max-width: 200px;
+        justify-self: center;
+        align-self: center;
+    }
 }
