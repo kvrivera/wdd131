@@ -4,6 +4,7 @@
 <head>
     <link href="styles/project-base.css" rel="stylesheet">
     <script src="scripts/button.js" defer></script>
+    <script src="scripts/project-base.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
             Kat's Shared Shelves
         </h1>
         <button id="menu"></button>
-        <nav>
+        <nav aria-label="Main Navigation">
             <ul class="navigation">
                 <li><a href="project-index.html">Home</a></li>
                 <li><a href="rating.html">Rating System</a></li>
@@ -45,22 +46,19 @@
         <h2 id="page-title">
             Storybooks
         </h2>
-        <div class="storybook-imgs">
-            <img src="images/when-i-feel-sad.jpg" alt="Cover of When I Feel Sad by Paula Bowles">
-            <img src="images/i-wish-i-could-tell-you.jpg"
-                alt="Cover of I Wish I Could Tell You by Jean-François Sénéchal" loading="lazy">
-            <img src="images/in-a-jar.jpg" alt="Cover of In a Jar by Deborah Marcero" loading="lazy">
-            <img src="images/little-wolfs-first-howling.jpg" alt="Cover of Little Wolf's First Howling" loading="lazy">
-            <img src="images/the-rescuer-of-tiny-creatures.jpg" alt="Cover of The Rescuer of Tiny Creatures"
-                loading="lazy">
-            <img src="images/not-quite-narwhal.jpg" alt="Cover of Not Quite Narwhal" loading="lazy">
-            <img src="images/its-okay-to-be-a-unicorn.jpg" alt="Cover of It's Okay to Be a Unicorn" loading="lazy">
-            <img src="images/sensitive.jpg" alt="Cover of Sensitive" loading="lazy">
-            <img src="images/daisy.jpg" alt="Cover of Daisy" loading="lazy">
-            <img src="images/walrus-in-the-bathtub.jpg" alt="Cover of Walrus in the Bathtub" loading="lazy">
-            <img src="images/maple-and-willow-apart.jpg" alt="Cover of Maple and Willow Apart" loading="lazy">
-            <img src="images/little-tree.jpg" alt="Cover of Little Tree" loading="lazy">
-        </div>
+        <nav aria-label="Storybook Navigation">
+            <ul class="navigation">
+                <li><a href="#" id="resiliencelink">Resilience</a></li>
+                <li><a href="#" id="regulationlink">Emotional Regulation</a></li>
+                <li><a href="#" id="deathlink">Death</a></li>
+                <li><a href="#" id="goodbyeslink">Goodbyes</a></li>
+                <li><a href="#" id="beyourselflink">Be Yourself</a></li>
+            </ul>
+
+            <div class="storybook-imgs">
+                <h3></h3>
+
+            </div>
 
 
     </main>
