@@ -73,7 +73,7 @@ header {
     color: var(--main-text-color);
 }
 
-nav a {
+.navigation a {
     display: block;
     /* block helps us design these well in the nav */
     color: var(--main-text-color);
@@ -83,7 +83,7 @@ nav a {
     transition: 0.25s;
 }
 
-nav a:hover {
+.navigation a:hover {
     border: 1px solid var(--border-color);
     /* adding this border helps us see the shape of the containers */
     background-color: var(--border-color);
@@ -142,7 +142,6 @@ h6 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content 1fr;
-
 }
 
 .author-box h3 {
@@ -179,6 +178,13 @@ h6 {
     gap: 5px;
 }
 
+.storybook-imgs h3 {
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/4;
+    text-align: center;
+}
+
 .storybook-imgs img {
     width: 100%;
     min-width: 50px;
@@ -200,6 +206,9 @@ h6 {
     border-top: 0.5rem solid var(--border-color);
     border-radius: .75rem;
 }
+
+/* for storybooks.html */
+.storybook-nav {}
 
 footer {
     font-size: x-small;
@@ -282,6 +291,13 @@ footer {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         /* 5 columns */
         gap: 5px;
+    }
+
+    .storybook-imgs h3 {
+        width: 100%;
+        grid-row: 1/2;
+        grid-column: 1/6;
+        text-align: center;
     }
 
     .storybook-imgs img {

@@ -117,57 +117,68 @@ const storybooks = [
         imgAltText: "Cover of Little Tree by "
     }
 ]
-const storybookHeading = document.querySelector(".storybook-imgs h3")
-const storybookCards = document.querySelector(".storybook-imgs");
-// create function to create storybook cards
-function createStorybookCards(storybooks) {
-    storybookCards.innerHTML = ""; // clear any existing content
-    storybooks.forEach(function (storybook) { // like saying "for each storybook in storybooks"
-        const card = document.createElement("figure"); // creature a figure
-        card.innerHTML = `
-            <h4>${storybook.bookTitle}</h4>
-            <p>Author: ${storybook.author}</p>
-            <p>My Rating: ${storybook.myRating} ⭐️</p>
-            <p>Themes: ${storybook.themes}</p>
-            <img src="${storybook.imgLocation}" alt="${storybook.imgAltText}" loading="lazy">
-        `
-        storybookCards.appendChild(card); // append it so it shows up on the html doc
+
+document.addEventListener("DOMContentLoaded", () => {
+    const storybookCards = document.querySelector(".storybook-imgs");
+    // create function to create storybook cards
+    function createStorybookCards(storybooks) {
+        storybookCards.innerHTML = ""; // clear any existing content
+        storybooks.forEach(function (storybook) { // like saying "for each storybook in storybooks"
+            const card = document.createElement("figure"); // creature a figure
+            card.innerHTML = `
+                <h4>${storybook.bookTitle}</h4>
+                <p>Author: ${storybook.author}</p>
+                <p>My Rating: ${storybook.myRating} ⭐️</p>
+                <p>Themes: ${storybook.themes}</p>
+                <img src="${storybook.imgLocation}" alt="${storybook.imgAltText}" loading="lazy">
+            `
+            storybookCards.appendChild(card); // append it so it shows up on the html doc
+        })
+    }
+
+    // now call the function to create the intitial storybook cards
+    createStorybookCards(storybooks);
+
+    const resilienceLink = document.querySelector("#resiliencelink");
+    // when user clicks resilience
+    resilienceLink.addEventListener("click", () => {
+        const resilienceStorybooks = storybooks.filter(storybook => storybook.themes.includes("resilience"));
+        createStorybookCards(resilienceStorybooks);
+        storybookCards.innerHTML = `<h3>Stories About Resilience</h3> ${storybookCards.innerHTML}`;
     })
-}
 
-// now call the function to create the intitial storybook cards
-createStorybookCards(storybooks);
+    // when user clicks regulation
+    const regulationLink = document.querySelector("#regulationlink");
+    regulationLink.addEventListener("click", () => {
+        const regulationStorybooks = storybooks.filter(storybook => storybook.themes.includes("regulation"));
+        createStorybookCards(regulationStorybooks);
+        storybookCards.innerHTML = `<h3>Stories About Emotional Regulation</h3> ${storybookCards.innerHTML}`;
+    })
 
-const resilienceLink = document.querySelector("#resiliencelink");
-// when user clicks resilience
+    // when user clicks death
+    const deathLink = document.querySelector("#deathlink");
+    deathLink.addEventListener("click", () => {
+        const deathStorybooks = storybooks.filter(storybook => storybook.themes.includes("death"));
+        createStorybookCards(deathStorybooks);
+        storybookCards.innerHTML = `<h3>Stories About Death</h3> ${storybookCards.innerHTML}`;
+    })
 
-// when user clicks regulation
-const regulationLink = document.querySelector("#regulationlink");
-regulationLink.addEventListener("click", () => {
-    const regulationStorybooks = storybooks.themes.filter(storybook => storybook.themes.includes("regulation"));
-    createStorybookCards(regulationStorybooks);
-    storybookHeading.innerText = "Stories About Resilience";
-})
+    // when user clicks goodbyes
+    const goodbyeLink = document.querySelector("#goodbyeslink");
+    goodbyeLink.addEventListener("click", () => {
+        const goodbyeStorybooks = storybooks.filter(storybook => storybook.themes.includes("goodbye"));
+        createStorybookCards(goodbyeStorybooks);
+        storybookCards.innerHTML = `<h3>Stories About Goodbyes</h3> ${storybookCards.innerHTML}`;
+    })
 
-// when user clicks death
-const deathLink = document.querySelector("#deathlink");
-deathLink.addEventListener("click", () => {
-    const deathStorybooks = storybooks.themes.filter.includes("death");
-    storybookHeading.innerText = "Stories About Death";
-})
+    // when user clicks be yourself
+    const beYourselfLink = document.querySelector("#beyourselflink");
+    beYourselfLink.addEventListener("click", () => {
+        const beYourselfStorybooks = storybooks.filter(storybook => storybook.themes.includes("be yourself"));
+        createStorybookCards(beYourselfStorybooks);
+        storybookCards.innerHTML = `<h3>Stories About Being Yourself</h3> ${storybookCards.innerHTML}`;
+    })
 
-// when user clicks goodbyes
-const goodbyeLink = document.querySelector("#goodbyeslink");
-goodbyeLink.addEventListener("click", () => {
-    const goodbyeStorybooks = storybooks.themes.filter.includes("goodbye");
-    storybookHeading.innerText = "Stories About Death";
-})
-
-// when user clicks be yourself
-const beYourselfLink = document.querySelector("#beyourselflink");
-beYourselfLink.addEventListener("click", () => {
-    const beYourselfStorybooks = storybooks.themes.filter.includes("be yourself");
-    storybookHeading.innerText = "Stories About Being Yourself";
 })
 
 
