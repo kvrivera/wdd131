@@ -1,3 +1,5 @@
+const productNameSelector = document.querySelector("#productname");
+
 const products = [
     {
         id: "fc-1888",
@@ -25,3 +27,13 @@ const products = [
         averagerating: 5.0
     }
 ];
+
+function populateNameSelectorField() {
+    products.forEach(function (product) {
+        productNameSelector.innerHTML += `
+        <option value="${product.id}">${product.name}</option>
+    `;
+    })
+}
+
+populateNameSelectorField();
