@@ -124,8 +124,7 @@ div {
 input[type="text"],
 textarea,
 input[type="date"],
-select 
-{
+select {
     border: solid #B0d0d3;
     border-radius: 6px;
     width: 100%;
