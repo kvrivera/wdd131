@@ -122,16 +122,17 @@ div {
 }
 
 input[type="text"],
-input[type="textarea"],
+textarea,
 input[type="date"],
-select {
+select 
+{
     border: solid #B0d0d3;
     border-radius: 6px;
     width: 100%;
     max-width: 400px;
     padding: .75rem;
     color: grey;
-    background-color: soft rgb(239, 235, 235);
+    background-color: rgb(239, 235, 235);
 }
 
 input[type="submit"] {
