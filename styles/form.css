@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=MedievalSharp&display=swap');
+
+header {
+    background-color: #B0d0d3;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid #88a5a7;
+    border-radius: 1rem;
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+body {
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+#menu {
+    background: none;
+    color: #6C4753;
+    border: 0;
+    margin: 1rem;
+    font-size: 2.5rem;
+    position: fixed;
+    top: 33px;
+    right: 0;
+}
+
+#menu::before {
+    content: "☰";
+    color: var(--header-color);
+    /* to open the menu */
+}
+
+#menu.open::before {
+    content: "✕";
+    /* to close the menu */
+}
+
+.open a {
+    display: block;
+    /* When the button is clicked, the open class is toggled (added/removed*/
+}
+
+.active::before {
+    content: "📚"
+        /* wayfinding symbol for user to know what page they are on*/
+}
+
+.navigation {
+    display: none;
+    /* show when 'open' class is added to the button but not otherwise*/
+}
+
+.open+nav .navigation {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sub-background-color);
+    max-width: 640px;
+    margin: 0 auto;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    color: var(--main-text-color);
+}
+
+.navigation a {
+    display: block;
+    /* block helps us design these well in the nav */
+    color: var(--main-text-color);
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.navigation a:hover {
+    border: 1px solid var(--border-color);
+    /* adding this border helps us see the shape of the containers */
+    background-color: var(--border-color);
+    font-family: var(--header-font);
+    font-size: larger;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    /* takes bullets off of <ul> element */
+}
+
+/* Form */
+form {
+    background-color: rgb(236, 238, 243);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 470px;
+}
+
+fieldset {
+    border: solid #B0d0d3;
+    margin: 2rem 0;
+    display: block;
+    /* stack vertically */
+    padding-top: .2rem;
+    font-size: .9rem;
+}
+
+label {
+    display: block;
+}
+
+legend {
+    padding: 0 .5rem;
+    padding-top: .75rem;
+}
+
+div {
+    padding-top: 1rem;
+    font-size: .9rem;
+}
+
+input[type="text"],
+input[type="textarea"],
+input[type="date"],
+select {
+    border: solid #B0d0d3;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 400px;
+    padding: .75rem;
+    color: grey;
+    background-color: soft rgb(239, 235, 235);
+}
+
+input[type="submit"] {
+    border: solid 1px #B0d0d3;
+    border-radius: 6px;
+    padding: .75rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem 2rem;
+    margin-top: -1rem;
+    box-shadow: 1px 1px 4px grey;
+}
+
+footer {
+    background-color: #B0d0d3;
+    border: 1px solid #88a5a7;
+    border-radius: 1rem;
+    padding: 1rem;
+}

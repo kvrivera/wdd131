@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="styles/form.css" rel="stylesheet">
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/form.js"></script>
+    <script defer src="scripts/button.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kathleen Rivera">
+    <meta name="description"
+        content="Responsive webpage with properly formatted form that collects user data. An assignment for WDD131 at BYU-I.">
+    <title>WDD131 | Form Assignment</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Product Review
+        </h1>
+        <button id="menu"></button>
+        <nav aria-label="Main Navigation">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project/project-index.html">Final Project</a></li>
+                <li><a href="filtered-temples.html">Temples</a></li>
+                <li><a href="place.html">Mordor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <fieldset id="product-name"> <!-- Product Name: -->
+                <legend>The Product</legend>
+                <div>Product Name: *</div>
+                <label for="productname">
+                    <select name="productname" required>
+                        <option value="" disabled selected>Select a Product...</option>
+                        <!-- Other options are created dynamically on form.js -->
+                    </select>
+                </label>
+
+                <div>Installation Date: *</div>
+                <label for="date">
+                    <input type="date" id="date" name="install-date" required>
+                </label>
+            </fieldset>
+
+            <fieldset id="rating"> <!-- Rating (radio buttons)-->
+                <legend>Your Review</legend>
+                <div>Rating: *</div>
+                <label for="rating-5">
+                    <input type="radio" id="rating-5" name="rating" required> &star;&star;&star;&star;&star;
+                </label>
+                <label for="rating-4">
+                    <input type="radio" id="rating-4" name="rating" required> &star;&star;&star;&star;
+                </label>
+                <label for="rating-3">
+                    <input type="radio" id="rating-3" name="rating" required> &star;&star;&star;
+                </label>
+                <label for="rating-2">
+                    <input type="radio" id="rating-2" name="rating" required> &star;&star;
+                </label>
+                <label for="rating-1">
+                    <input type="radio" id="rating-1" name="rating" required> &star;
+                </label>
+
+                <div>Which features did you find most useful in the product?</div>
+                <label id="durability">
+                    <input type="checkbox" id="features" name="durability" value="useful">Durability
+                </label>
+                <label for="ease-of-use">
+                    <input type="checkbox" id="features" name="ease-of-use" value="useful">Ease of Use
+                </label>
+                <label for="performance">
+                    <input type="checkbox" id="features" name="performance" value="useful">Performance
+                </label>
+                <label for="design">
+                    <input type="checkbox" id="features" name="design" value="useful">Design
+                </label>
+
+                <div>Written Review (optional):</div>
+                <label for="review">
+                    <input type="textarea" id="review" name="review">
+                </label>
+
+                <div>Your Name (optional):</div>
+                <label>
+                    <input type="text" id="user-name" name="fname">
+                </label>
+            </fieldset>
+            <input type="submit" value="Share Your Review">
+
+        </form>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Kathleen Rivera, Canada
+        </p>
+
+        <p id="lastModified">
+        </p>
+    </footer>
+
+</body>
+
+</html>
