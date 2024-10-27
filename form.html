@@ -38,7 +38,7 @@
                 <legend>The Product</legend>
                 <div>Product Name: *</div>
                 <label for="productname">
-                    <select name="productname" required>
+                    <select name="productname" id="productname">
                         <option value="" disabled selected>Select a Product...</option>
                         <!-- Other options are created dynamically on form.js -->
                     </select>
@@ -70,17 +70,17 @@
                 </label>
 
                 <div>Which features did you find most useful in the product?</div>
-                <label id="durability">
-                    <input type="checkbox" id="features" name="durability" value="useful">Durability
+                <label id="feature-durability">
+                    <input type="checkbox" id="feature-durability" name="durability" value="useful">Durability
                 </label>
-                <label for="ease-of-use">
-                    <input type="checkbox" id="features" name="ease-of-use" value="useful">Ease of Use
+                <label for="feature-ease-of-use">
+                    <input type="checkbox" id="feature-ease-of-use" name="ease-of-use" value="useful">Ease of Use
                 </label>
-                <label for="performance">
-                    <input type="checkbox" id="features" name="performance" value="useful">Performance
+                <label for="feature-performance">
+                    <input type="checkbox" id="feature-performance" name="performance" value="useful">Performance
                 </label>
-                <label for="design">
-                    <input type="checkbox" id="features" name="design" value="useful">Design
+                <label for="feature-design">
+                    <input type="checkbox" id="feature-design" name="design" value="useful">Design
                 </label>
 
                 <div>Written Review (optional):</div>
