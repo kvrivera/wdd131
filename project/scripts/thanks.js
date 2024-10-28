@@ -12,7 +12,7 @@ if (numRecs !== 0) { // if they have submitted a review before...
     displayRecsCount.textContent = numRecs; // show them how many reviews they've submitted
 }
 else {
-    displayRecsCount.textContent = `Thank you for submitting your first recommendation!`;
+    displayRecsCount.textContent = ` this was your first recommendation!`;
 }
 
 // increment the number of reviews by 1
