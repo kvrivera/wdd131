@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Oooh+Baby&display=swap');
 
 :root {
-    --background-color: #cecbd8;
-    --sub-background-color: #E1AEC5;
+    --background-color: #FFD6C0;
+    --sub-background-color: #dd9999;
 
     --header-font: "Oooh Baby", cursive;
-    --header-color: #6d3360;
+    --header-color: #34435e;
 
     --main-font: "Oxygen", sans-serif;
-    --main-text-color: #372245;
+    --main-text-color: #440381;
 
-    --border-color: #b68ebf;
+    --border-color: #EC368D;
 }
 
 header {
@@ -88,7 +88,7 @@ header {
 .storybook-nav a:hover {
     border: 1px solid var(--border-color);
     /* adding this border helps us see the shape of the containers */
-    background-color: var(--border-color);
+    background-color: var(--header-color);
     font-family: var(--header-font);
     font-size: larger;
     color: #fff;
@@ -204,22 +204,31 @@ h6 {
 
 
 /* for rating.html */
-.rating-card {
+.rating-box {
     display: grid;
+    gap: 1rem;
     justify-content: center;
     max-width: 740px;
     margin: 0 auto;
     padding: 1rem;
     text-align: center;
-    border: 1rem solid var(--border-color);
-    border-bottom: 0.5rem solid var(--border-color);
-    border-top: 0.5rem solid var(--border-color);
+}
+
+.rating-card {
+    gap: 1rem;
+    border: .2rem solid var(--border-color);
+    border-bottom: 0.2rem solid var(--border-color);
+    border-top: 0.2rem solid var(--border-color);
     border-radius: .75rem;
+    width: 100%;
+    max-width: 400px;
+    background-color: #f3d0be;
 }
 
 /* for tbr.html Form */
 .book-recs {
-    background-color: rgb(236, 238, 243);
+    background-color: #fee3d6;
+    ;
     padding-left: 1rem;
     padding-right: 1rem;
     min-width: 400px;
@@ -251,7 +260,7 @@ h6 {
 }
 
 .book-recs input[type="text"] {
-    border: solid #B0d0d3;
+    border: solid var(--sub-background-color);
     border-radius: 6px;
     width: 100%;
     max-width: 350px;
@@ -262,7 +271,7 @@ h6 {
 }
 
 .book-recs input[type="submit"] {
-    border: solid 1px #B0d0d3;
+    border: solid 1px var(--border-color);
     border-radius: 6px;
     padding: .75rem;
     width: 100%;
@@ -314,6 +323,12 @@ footer {
         display: block;
         flex: 1 1 auto;
         /* grow, shrink, auto*/
+    }
+
+    /**/
+    .rating-card {
+        width: 100%;
+        max-width: 779px;
     }
 
     /* for index.html */
