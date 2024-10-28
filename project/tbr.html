@@ -24,7 +24,7 @@
                 <li><a href="rating.html">Rating System</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
                 <li><a href="storybooks.html">Storybooks</a></li>
-                <li><a href="tbr.html">Coming Soon</a></li>
+                <li><a href="tbr.html">Recommend a Book</a></li>
             </ul>
         </nav>
     </header>
@@ -43,30 +43,55 @@
         </div>
 
         <h2 class="page-title">
-            To Be Read
+            Recommend a Book
         </h2>
 
-        <form method="get" action="thanks.html">
+        <form method="get" action="thanks.html" class="book-recs">
 
             <fieldset>
-                <legend>Applicant Information</legend>
-                <label>First Name* <input type="text" name="fname" required></label>
-                <label>Last Name* <input type="text" name="lname" required></label>
-                <label>Phone <input type="tel" name="phone" placeholder="1234567899"></label>
-                <label>Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
-                <label>Website <input type="url" name="email" placeholder="http://"></label>
-
-
+                <legend>The Book</legend>
+                <label>
+                    <div>Title: *</div>
+                    <input type="text" name="title" required>
+                </label>
+                <label>
+                    <div>Author: *</div>
+                    <input type="text" name="author" required>
+                </label>
+                <label>
+                    <div>Your Review:</div>
+                    <label for="rating-5">
+                        <input type="radio" id="rating-5" name="rating"> &star;&star;&star;&star;&star;
+                    </label>
+                    <label for="rating-4">
+                        <input type="radio" id="rating-4" name="rating"> &star;&star;&star;&star;
+                    </label>
+                    <label for="rating-3">
+                        <input type="radio" id="rating-3" name="rating"> &star;&star;&star;
+                    </label>
+                    <label for="rating-2">
+                        <input type="radio" id="rating-2" name="rating"> &star;&star;
+                    </label>
+                    <label for="rating-1">
+                        <input type="radio" id="rating-1" name="rating"> &star;
+                    </label>
+                </label>
             </fieldset>
 
             <fieldset>
-                <legend>Course Information</legend>
-                <div>Audience:</div>
-                <label><input type="radio" name="Audience" value="beginner"> Beginner</label>
+                <legend>Want us to notify you when the review is posted?</legend>
+                <div>Your name:</div>
+                <label>
+                    <input type="text" name="user-name">
+                </label>
+
+                <div>Email:</div>
+                <label>
+                    <input type="text" name="email">
+                </label>
             </fieldset>
 
-
-
+            <input type="submit" value="Recommend This Book!">
         </form>
 
 

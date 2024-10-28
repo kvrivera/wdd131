@@ -73,7 +73,8 @@ header {
     color: var(--main-text-color);
 }
 
-.navigation a {
+.navigation a,
+.storybook-nav a {
     display: block;
     /* block helps us design these well in the nav */
     color: var(--main-text-color);
@@ -83,13 +84,19 @@ header {
     transition: 0.25s;
 }
 
-.navigation a:hover {
+.navigation a:hover,
+.storybook-nav a:hover {
     border: 1px solid var(--border-color);
     /* adding this border helps us see the shape of the containers */
     background-color: var(--border-color);
     font-family: var(--header-font);
     font-size: larger;
     color: #fff;
+}
+
+.storybook-nav {
+    display: grid;
+    grid-auto-flow: column;
 }
 
 ul {
@@ -100,6 +107,7 @@ ul {
 .page-title {
     text-align: center;
 }
+
 
 body {
     background-color: var(--background-color);
@@ -130,6 +138,7 @@ h6 {
     font-weight: 400;
     font-style: normal;
     color: var(--header-color);
+    text-align: center;
 }
 
 
@@ -193,6 +202,7 @@ h6 {
     align-self: center;
 }
 
+
 /* for rating.html */
 .rating-card {
     display: grid;
@@ -207,8 +217,61 @@ h6 {
     border-radius: .75rem;
 }
 
-/* for storybooks.html */
-.storybook-nav {}
+/* for tbr.html Form */
+.book-recs {
+    background-color: rgb(236, 238, 243);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.book-recs fieldset {
+    border: solid var(--border-color);
+    margin: 2rem 0;
+    display: block;
+    /* stack vertically */
+    padding-top: .2rem;
+    font-size: .9rem;
+}
+
+.book-recs label {
+    display: block;
+}
+
+.book-recs legend {
+    padding: 0 .5rem;
+    padding-top: .75rem;
+}
+
+.book-recs div {
+    padding-top: 1rem;
+    font-size: .9rem;
+}
+
+.book-recs input[type="text"] {
+    border: solid #B0d0d3;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 350px;
+    padding-top: 0.25rem;
+    padding: .75rem;
+    color: grey;
+    background-color: rgb(239, 235, 235);
+}
+
+.book-recs input[type="submit"] {
+    border: solid 1px #B0d0d3;
+    border-radius: 6px;
+    padding: .75rem;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+    box-shadow: 1px 1px 4px grey;
+}
+
 
 footer {
     font-size: x-small;
@@ -288,8 +351,7 @@ footer {
     /* for storybooks.html */
     .storybook-imgs {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        /* 5 columns */
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 5px;
     }
 
