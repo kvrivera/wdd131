@@ -97,6 +97,8 @@ header {
 .storybook-nav {
     display: grid;
     grid-auto-flow: column;
+    border: 1px solid var(--border-color);
+    padding-right: 2rem;
 }
 
 ul {
