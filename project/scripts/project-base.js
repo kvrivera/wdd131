@@ -91,30 +91,30 @@ const storybooks = [
     },
     {
         bookTitle: "Walrus in the Bathtub",
-        author: "",
+        author: "Deborah Underwood",
         illustrator: "",
         themes: "change",
         myRating: 5,
         imgLocation: "images/walrus-in-the-bathtub.webp",
-        imgAltText: "Cover of Walrus in the Bathtub by "
+        imgAltText: "Cover of Walrus in the Bathtub by Deborah Underwood"
     },
     {
         bookTitle: "Maple and Willow Apart",
-        author: " ",
+        author: "Lori Nichols",
         illustrator: "",
         themes: "change",
         myRating: 5,
         imgLocation: "images/maple-and-willow-apart.jpg",
-        imgAltText: "Cover of Maple and Willow Apart by "
+        imgAltText: "Cover of Maple and Willow Apart by Lori Nichols"
     },
     {
         bookTitle: "Little Tree",
-        author: " ",
+        author: "Loren Long",
         illustrator: "",
         themes: "change",
         myRating: 5,
         imgLocation: "images/little-tree.jpg",
-        imgAltText: "Cover of Little Tree by "
+        imgAltText: "Cover of Little Tree by Loren Long"
     }
 ]
 
