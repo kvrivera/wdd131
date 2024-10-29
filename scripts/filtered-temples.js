@@ -99,6 +99,8 @@ const temples = [
 // temple in sq ft, absolute image address of the temple,
 // an alt value for the temple image.
 // Use native lazy loading to each temple image
+
+
 const templeCards = document.querySelector(".temple-cards"); // find the location in the html doc
 function createTempleCard(temples) {
     templeCards.innerHTML = ""; // clear any existing content

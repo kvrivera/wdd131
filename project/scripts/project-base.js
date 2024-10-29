@@ -14,7 +14,7 @@ const storybooks = [
         illustrator: "",
         themes: "resilience, emotional regulation",
         myRating: 5,
-        imgLocation: "images/when-i-feel-sad.jpg",
+        imgLocation: "images/when-i-feel-sad.webp",
         imgAltText: "Cover of When I Feel Sad by Paula Bowles"
     },
     {
@@ -23,7 +23,7 @@ const storybooks = [
         illustrator: "",
         themes: "death",
         myRating: 5,
-        imgLocation: "images/i-wish-i-could-tell-you.jpg",
+        imgLocation: "images/i-wish-i-could-tell-you.webp",
         imgAltText: "Cover of I Wish I Could Tell You by Jean-François Sénéchal"
     },
     {
@@ -50,7 +50,7 @@ const storybooks = [
         illustrator: "",
         themes: "be yourself",
         myRating: 5,
-        imgLocation: "images/the-rescuer-of-tiny-creatures.jpg",
+        imgLocation: "images/the-rescuer-of-tiny-creatures.webp",
         imgAltText: "Cover of The Rescuer of Tiny Creatures by Curtis Manley"
     },
     {
@@ -68,7 +68,7 @@ const storybooks = [
         illustrator: "",
         themes: "be yourself",
         myRating: 5,
-        imgLocation: "images/its-okay-to-be-a-unicorn.jpg",
+        imgLocation: "images/its-okay-to-be-a-unicorn.webp",
         imgAltText: "Cover of It's Okay to be a Unicorn by Jason Tharp"
     },
     {
@@ -86,7 +86,7 @@ const storybooks = [
         illustrator: "",
         themes: "be yourself",
         myRating: 5,
-        imgLocation: "images/daisy.jpg",
+        imgLocation: "images/daisy.webp",
         imgAltText: "Cover of Daisy by Jessixa Bagley"
     },
     {
@@ -95,7 +95,7 @@ const storybooks = [
         illustrator: "",
         themes: "change",
         myRating: 5,
-        imgLocation: "images/walrus-in-the-bathtub.jpg",
+        imgLocation: "images/walrus-in-the-bathtub.webp",
         imgAltText: "Cover of Walrus in the Bathtub by "
     },
     {
